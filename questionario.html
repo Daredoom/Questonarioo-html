@@ -1,0 +1,109 @@
+<html>
+<head>
+<title>Richiesta dati</title>
+<script language = "javascript">
+<!-- 
+function riepilogo()
+{
+nome = invia.nome.value;
+cognome = invia.cognome.value;
+
+if (nome == "" || cognome == "")
+	{
+	alert("campi obbligatori")
+	return;
+	}
+	
+k = invia.scuola.selectedIndex;
+
+switch(k)
+	{
+	case 0:
+		scuola = "ITC"
+	break;
+	case 1:
+		scuola = "ITIS"
+	break;
+	case 2:
+		scuola = "LICEO"
+	break;
+	}
+	
+if(invia.sex == "Maschio")
+	{
+	sesso = "maschile";
+	}
+else
+	{
+	sesso = "femminile";
+	}
+
+sport = "";
+
+if(invia.calcio.checked)
+	{
+	sport += " " + "calcio";
+	}
+if(invia.nuoto.checked)
+	{
+	sport += " " + "nuoto";
+	}
+if(invia.rugby.checked)
+	{
+	sport += " " + "rugby";
+	}
+if(invia.sci.checked)
+	{
+	sport += " " + "sci";
+	}
+
+	messaggio = "Ciao " + nome + " " + cognome + " frequenti la scuola " + scuola + " sei di sesso " + sesso;
+	
+if(sport == "")
+	{
+	messaggio = messaggio + " e non pratichi nessuno sport"
+	}
+else
+	{
+	messaggio = messaggio + " e pratichi questi sport:" + sport;
+	}
+	
+alert(messaggio);
+}
+-->
+</script>
+<style type = "text/css">
+	.uno
+		{
+		background: white;
+		border: 1px solid red;
+		color: green;
+		width: 150px;
+		}
+</style>
+</head>
+<body>
+<p allign = "center"><font size = "6"> USO I FORM</font></p>
+<form name = "invia">
+Inserisci il nome: <input type = "text" name = "nome" class = "uno"> <br><br>
+Inserisci il cognome: <input type = "text" name = "cognome" class = "uno"> <br><br>
+Scuola: <select name = "scuola">
+<option value = "1">ITC</option>
+<option value = "2">ITIS</option>
+<option value = "3">LICEO</option>
+</select><br><br>
+Sesso:
+<input type = "radio" name = "sex" value = "Maschio">Maschio
+<input type = "radio" name = "sex" value = "Femmina">Femmina
+<br><br>
+Scegli gli sport che preferisci<br>
+<input type = "checkbox" name = "calcio"> calcio
+<input type = "checkbox" name = "rugby"> rugby
+<input type = "checkbox" name = "sci"> sci
+<input type = "checkbox" name = "nuoto"> nuoto
+
+<input type = "button" value = "invia"
+	   onclick = "riepilogo();">
+</form>
+</body>
+</html>
