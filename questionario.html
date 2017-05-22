@@ -1,21 +1,21 @@
 <html>
 <head>
 <title>Richiesta dati</title>
-<script language = "javascript">
+<script language = "javascript">		<!-- Definisco l'inizio di uno script in javascript-->
 <!-- 
-function riepilogo()
+function riepilogo()					<!-- Inizializzo una funzione di nome riepilogo che non prende in input nulla-->
 {
-nome = invia.nome.value;
+nome = invia.nome.value;				<!-- Con invia mi riferisco al nome del forma di cui prendiamo il valore di nome-->
 cognome = invia.cognome.value;
 
-if (nome == "" || cognome == "")
+if (nome == "" || cognome == "")		<!-- Se nome o cognome sono vuoti mando in output un messaggio che dice che sono campi obbligatori-->
 	{
 	alert("campi obbligatori")
 	return;
 	}
 	
-k = invia.scuola.selectedIndex;
-
+k = invia.scuola.selectedIndex;			<!-- La variabile k è una variabile numerica che assume il valore assegnato a ogni scuola e tramite uno switch
+										<!-- assegna un valore in string a scuola-->
 switch(k)
 	{
 	case 0:
@@ -29,7 +29,7 @@ switch(k)
 	break;
 	}
 	
-if(invia.sex == "Maschio")
+if(invia.sex == "Maschio")				<!-- Controllo la variabile per il sesso--> 
 	{
 	sesso = "maschile";
 	}
@@ -40,7 +40,7 @@ else
 
 sport = "";
 
-if(invia.calcio.checked)
+if(invia.calcio.checked)				<!-- E infine quali spunte ci sono nella sezione sport-->
 	{
 	sport += " " + "calcio";
 	}
@@ -57,7 +57,7 @@ if(invia.sci.checked)
 	sport += " " + "sci";
 	}
 
-	messaggio = "Ciao " + nome + " " + cognome + " frequenti la scuola " + scuola + " sei di sesso " + sesso;
+	messaggio = "Ciao " + nome + " " + cognome + " frequenti la scuola " + scuola + " sei di sesso " + sesso;	<!-- Infine construisco il messaggio comee somma di stringhe-->
 	
 if(sport == "")
 	{
@@ -68,34 +68,39 @@ else
 	messaggio = messaggio + " e pratichi questi sport:" + sport;
 	}
 	
-alert(messaggio);
+alert(messaggio);						<!-- E stampo il messaggio-->
 }
 -->
 </script>
-<style type = "text/css">
+<style type = "text/css">				<!-- Definisco lo stile con l'ausilio del css -->
 	.uno
 		{
 		background: white;
-		border: 1px solid red;
-		color: green;
+		border: 1px solid blue;
+		color: black;
 		width: 150px;
 		}
 </style>
 </head>
 <body>
-<p allign = "center"><font size = "6"> USO I FORM</font></p>
+<p allign = "center"><font size = "6"> Parlaci di te!</font></p>		<!-- Creo la pagina html che utilizzeràlo script-->
+
 <form name = "invia">
+
 Inserisci il nome: <input type = "text" name = "nome" class = "uno"> <br><br>
 Inserisci il cognome: <input type = "text" name = "cognome" class = "uno"> <br><br>
+
 Scuola: <select name = "scuola">
 <option value = "1">ITC</option>
 <option value = "2">ITIS</option>
 <option value = "3">LICEO</option>
 </select><br><br>
+
 Sesso:
 <input type = "radio" name = "sex" value = "Maschio">Maschio
 <input type = "radio" name = "sex" value = "Femmina">Femmina
 <br><br>
+
 Scegli gli sport che preferisci<br>
 <input type = "checkbox" name = "calcio"> calcio
 <input type = "checkbox" name = "rugby"> rugby
